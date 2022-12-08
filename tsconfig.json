@@ -17,6 +17,8 @@
       "@/tests/*": ["../tests/*"]
     },
     "allowJs": true,
+    "strict": true,
+    "strictNullChecks": true,
     "resolveJsonModule": true
   }
 }
