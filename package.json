@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "test": "jest --passWithNoTests",
     "test:watch": "yarn test -- --watch",
     "test:steged": "yarn test -- --findRelatedTests",
     "test:ci": "yarn test -- --coverage",
-    "release": "standard-version",
-    "co": "./node_modules/cz-customizable/standalone.js"
+    "release": "standard-version"
   },
   "keywords": [],
   "author": "",
