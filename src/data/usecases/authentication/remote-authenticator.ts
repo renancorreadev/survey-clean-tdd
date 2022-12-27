@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
+import { AuthenticationParams } from '@/domain/usecases/authentication'
 import { HttpPostClient } from '../../protocols/http-post-client'
 
 export class RemoteAuthentication {
@@ -8,9 +9,10 @@ export class RemoteAuthentication {
     private readonly httpClient: HttpPostClient
   ) {}
 
-  async auth (): Promise<void> {
+  async auth (params: AuthenticationParams): Promise<void> {
     await this.httpClient.post({
-      url: this.url
+      url: this.url,
+      body: params
     })
   }
 }
