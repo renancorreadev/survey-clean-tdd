@@ -1,7 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { Config } from '@jest/types'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const config: Config.InitialOptions = {
   roots: ['<rootDir>/src'],
   clearMocks: true,
@@ -13,7 +11,11 @@ const config: Config.InitialOptions = {
   testEnvironment: 'node',
   transform: {
     '.+\\.ts$': 'ts-jest'
+  },
+  moduleNameMapper: {
+    '@/(.*)': '<rootDir>/src/$1'
   }
+
 }
 
 export default config
