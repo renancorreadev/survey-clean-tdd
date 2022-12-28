@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { AuthenticationParams } from '@/domain/usecases/authentication'
-import { HttpPostClient } from '../../protocols/http-post-client'
+import { HttpPostClient } from '@/data/protocols/http-post-client'
 
 export class RemoteAuthentication {
   constructor (
