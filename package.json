@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "test": "jest --passWithNoTests",
-    "test:watch": "yarn test -- --watch",
+    "test": "jest --passWithNoTests --no-cache --runInBand",
+    "test:watch": "yarn test -- --watch ",
     "test:steged": "yarn test -- --findRelatedTests",
     "test:ci": "yarn test -- --coverage",
     "release": "standard-version"
