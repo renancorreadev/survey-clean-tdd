@@ -6,11 +6,12 @@ const config: Config.InitialOptions = {
   collectCoverage: true,
   coverageDirectory: 'coverage',
   collectCoverageFrom: [
-    '<rootDir>/src/**/*.{ts, tsx}'
+    '<rootDir>/src/**/*.{ts, tsx}',
+    '!<rootDir>/src/**/index.ts'
   ],
   testEnvironment: 'node',
   transform: {
-    '.+\\.ts$': 'ts-jest'
+    '^.+\\.(js|jsx|ts|tsx)$': 'ts-jest'
   },
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1'
